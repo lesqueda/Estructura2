@@ -13,22 +13,6 @@ auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth, wait_on_rate_limit=True,
 wait_on_rate_limit_notify=True)
 
-
-#Obtener mi información
-'''data = api.me() #el .me hace que obtenga mi información
-print (json.dumps(data._json, indent=2))'''
-
-#Obtener información de otro usuario.
-'''data = api.get_user("nike")
-print (json.dumps(data._json, indent=2))'''
-
-#Obtener los followers
-#data = api.followers(screen_name="nike")
-#print (len(data)) #cantidad de data en el arreglo (ver si está paginada)
-
-#for user in data:
- #   print (json.dumps(user._json, indent=2))
-
 # Obtener followers de un usuario utilizando paginación
 #for user in tweepy.Cursor(api.followers, screen_name="nike").items(100):
  #   print (json.dumps(user._json, indent=2))
